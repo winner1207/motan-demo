@@ -12,5 +12,6 @@
     <modules>
         <module>chat</module>
 		<module>chatbusiness</module>
+        <module>chatlib</module>
     </modules>
 </project>

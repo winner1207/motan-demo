@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wyt.motan</groupId>
-    <artifactId>chat</artifactId>
+    <artifactId>chatlib</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>chat</name>
+    <name>chatlib</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -25,12 +25,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.wyt.motan</groupId>
-            <artifactId>chatlib</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
