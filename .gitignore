@@ -1,4 +1,5 @@
 .idea/
+demo.iml
 chat/chat.iml
 chat/target/
 chatbusiness/eureka.iml
