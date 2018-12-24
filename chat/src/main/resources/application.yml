@@ -6,33 +6,33 @@ spring:
 
 rpc:
   common:
-    #×¢²áÖĞĞÄÅäÖÃ
+    #æ³¨å†Œä¸­å¿ƒé…ç½®
     registry:
-      regProtocol: zookeeper #×¢²áÖĞĞÄĞ­Òé
-      address: 192.168.0.30:2181 #×¢²áÖĞĞÄµØÖ·
-      requestTimeout: 1000 #×¢²áÖĞĞÄÁ¬½Ó³¬Ê±Ê±¼ä(ºÁÃë)
-      connectTimeout: 3000 #×¢²áÖĞĞÄÇëÇó³¬Ê±Ê±¼ä(ºÁÃë)
-    #Ğ­ÒéÅäÖÃ
+      regProtocol: zookeeper #æ³¨å†Œä¸­å¿ƒåè®®
+      address: 192.168.0.30:2181 #æ³¨å†Œä¸­å¿ƒåœ°å€
+      requestTimeout: 1000 #æ³¨å†Œä¸­å¿ƒè¿æ¥è¶…æ—¶æ—¶é—´(æ¯«ç§’)
+      connectTimeout: 3000 #æ³¨å†Œä¸­å¿ƒè¯·æ±‚è¶…æ—¶æ—¶é—´(æ¯«ç§’)
+    #åè®®é…ç½®
     protocol:
-      name: motan #Ğ­ÒéÃû³Æ
-      minWorkerThread: 20 #×îĞ¡¹¤×÷poolÏß³ÌÊı
-      maxWorkerThread: 50 #×î´ó¹¤×÷poolÏß³ÌÊı
-    #Ö¸¶¨ĞèÒª½âÎöµÄ°üÃû
+      name: motan #åè®®åç§°
+      minWorkerThread: 20 #æœ€å°å·¥ä½œpoolçº¿ç¨‹æ•°
+      maxWorkerThread: 50 #æœ€å¤§å·¥ä½œpoolçº¿ç¨‹æ•°
+    #æŒ‡å®šéœ€è¦è§£æçš„åŒ…å
     annotation:
       package: com.wyt.motan
   chat:
-    #·şÎñ¶ËÅäÖÃ
+    #æœåŠ¡ç«¯é…ç½®
     server:
-      export:  'motanProtocol:8501' #·şÎñ¶Ë¿Ú
+      export:  'motanProtocol:8501' #æœåŠ¡ç«¯å£
       group: motan_demo_chat
       registry: motanRegistry
   business:
-    #¿Í»§¶ËÅäÖÃ
+    #å®¢æˆ·ç«¯é…ç½®
     client:
       protocol: motanProtocol
       group: motan_demo_business
       check: false
-      requestTimeout: 30000 #ÇëÇó³¬Ê±Ê±¼ä(ºÁÃë)
-      connectTimeout: 5000 #Á¬½Ó³¬Ê±Ê±¼ä(ºÁÃë)
+      requestTimeout: 30000 #è¯·æ±‚è¶…æ—¶æ—¶é—´(æ¯«ç§’)
+      connectTimeout: 5000 #è¿æ¥è¶…æ—¶æ—¶é—´(æ¯«ç§’)
       registry: motanRegistry
 
