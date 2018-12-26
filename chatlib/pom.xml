@@ -29,7 +29,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -46,18 +45,37 @@
             <artifactId>motan-transport-netty</artifactId>
             <version>RELEASE</version>
         </dependency>
-
         <!-- only needed for spring-based features -->
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-springsupport</artifactId>
             <version>RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-registry-zookeeper</artifactId>
             <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.weibo</groupId>
+            <artifactId>filter-opentracing</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-api</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing.brave</groupId>
+            <artifactId>brave-opentracing</artifactId>
+            <version>0.31.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.reporter2</groupId>
+            <artifactId>zipkin-sender-okhttp3</artifactId>
+            <version>2.6.1</version>
         </dependency>
 
         <dependency>

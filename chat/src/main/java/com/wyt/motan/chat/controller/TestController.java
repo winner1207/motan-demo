@@ -37,7 +37,7 @@ public class TestController {
         long start = System.currentTimeMillis();
         for (int i = 0; i < num; i++) {
             long id = i;
-            motanBusinessService.processBusinessSync(id, new HashMap<>());
+            motanBusinessService.processBusinessAsync(id, new HashMap<>());
         }
         long end = System.currentTimeMillis();
         logger.error("count method cost:" + (end - start) + "ms");

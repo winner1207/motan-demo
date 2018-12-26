@@ -36,6 +36,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.business.client")
     public BasicRefererConfigBean baseRefererConfig1() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
+        config.setFilter("opentracing");
         return config;
     }
 
@@ -43,6 +44,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.chat.client")
     public BasicRefererConfigBean baseRefererConfig2() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
+        config.setFilter("opentracing");
         return config;
     }
 

@@ -35,13 +35,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -57,17 +55,20 @@
             <artifactId>motan-transport-netty</artifactId>
             <version>RELEASE</version>
         </dependency>
-
         <!-- only needed for spring-based features -->
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-springsupport</artifactId>
             <version>RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-registry-zookeeper</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.weibo</groupId>
+            <artifactId>filter-opentracing</artifactId>
             <version>RELEASE</version>
         </dependency>
 

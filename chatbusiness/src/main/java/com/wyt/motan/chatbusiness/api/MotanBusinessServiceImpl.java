@@ -32,12 +32,7 @@ public class MotanBusinessServiceImpl implements MotanBusinessService {
 
     @Override
     public void processBusinessAsync(long id, Map<String, Object> paramMap) {
-        try {
-            logger.error("processBusiness ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap));
-        } catch (Exception e) {
-            logger.error("processBusiness error ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap), e);
-        }
-//        ThreadPoolUtil.processBusiness(id, paramMap);
+        ThreadPoolUtil.processBusiness(id, paramMap);
     }
 
 }

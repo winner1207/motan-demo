@@ -5,6 +5,10 @@ spring:
     name: chat1
 
 rpc:
+  opentracing:
+    #opentracing配置
+    serviceName: motan_demo_service
+    address: http://127.0.0.1:9411/api/v2/spans
   common:
     #注册中心配置
     registry:

@@ -21,7 +21,7 @@ public class ThreadPoolUtil {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(1 * 1000);
                     logger.error("processBusiness ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap));
                 } catch (Exception e) {
                     logger.error("processBusiness error ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap), e);
