@@ -1,7 +1,9 @@
-package com.wyt.motan.opentracing;
+package com.wyt.motan.filter;
 
 import com.weibo.api.motan.common.MotanConstants;
 import com.weibo.api.motan.core.extension.Activation;
+import com.weibo.api.motan.core.extension.Scope;
+import com.weibo.api.motan.core.extension.Spi;
 import com.weibo.api.motan.core.extension.SpiMeta;
 import com.weibo.api.motan.filter.Filter;
 import com.weibo.api.motan.filter.opentracing.OpenTracingContext;
@@ -26,7 +28,8 @@ import java.util.Map.Entry;
 /**
  * Created by wangyitao on 2018/12/25.
  */
-@SpiMeta(name = "opentracing")
+@Spi(scope = Scope.SINGLETON)
+@SpiMeta(name = "myOpentracing")
 @Activation(sequence = 30, key = {MotanConstants.NODE_TYPE_SERVICE, MotanConstants.NODE_TYPE_REFERER})
 public class OpenTracingFilter implements Filter {
 
@@ -74,7 +77,7 @@ public class OpenTracingFilter implements Filter {
         boolean exception = true;
         try {
             Response response = caller.call(request);
-            if (response.getException() != null) {
+            if (response != null && response.getException() != null) {
                 ex = response.getException();
             } else {
                 exception = false;

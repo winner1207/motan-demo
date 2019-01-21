@@ -40,4 +40,17 @@ public class ThreadPoolUtil {
         });
     }
 
+    public static void processBusinessAsync(final long id, final Map<String, Object> paramMap) {
+        executor.submit(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    logger.error("processBusinessAsync ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap));
+                } catch (Exception e) {
+                    logger.error("processBusinessAsync error ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap), e);
+                }
+            }
+        });
+    }
+
 }

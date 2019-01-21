@@ -18,15 +18,15 @@ public class MotanBusinessServiceImpl implements MotanBusinessService {
     @Value("${spring.application.name}")
     private String app;
 
-    private static Logger logger = Logger.getLogger(ThreadPoolUtil.class);
+    private static Logger logger = Logger.getLogger(MotanBusinessServiceImpl.class);
 
     @Override
     public void processBusinessSync(long id, Map<String, Object> paramMap) {
         try {
             Thread.sleep(1000);
-            logger.error("processBusiness ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap));
+            logger.error("processBusinessSync ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap));
         } catch (Exception e) {
-            logger.error("processBusiness error ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap), e);
+            logger.error("processBusinessSync error ! id:" + id + ", paramMap:" + JSON.toJSONString(paramMap), e);
         }
     }
 

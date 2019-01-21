@@ -36,7 +36,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.business.client")
     public BasicRefererConfigBean baseRefererConfig1() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setFilter("opentracing");
+        config.setFilter("myOpentracing,fusingDrop");
         return config;
     }
 
@@ -44,7 +44,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.chat.client")
     public BasicRefererConfigBean baseRefererConfig2() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setFilter("opentracing");
+        config.setFilter("myOpentracing,fusingDrop");
         return config;
     }
 
@@ -52,6 +52,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.business.server")
     public BasicServiceConfigBean baseServiceConfig1() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
+        config.setFilter("recordReqId");
         return config;
     }
 
@@ -59,6 +60,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.chat.server")
     public BasicServiceConfigBean baseServiceConfig2() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
+        config.setFilter("recordReqId");
         return config;
     }
 }
