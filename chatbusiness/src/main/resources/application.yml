@@ -30,11 +30,10 @@ rpc:
       export:  'motanProtocol:8601' #服务端口
       group: motan_demo_business
       registry: motanRegistry
-  chat:
     #客户端配置
     client:
       protocol: motanProtocol
-      group: motan_demo_chat
+      group: motan_demo_business
       check: false
       requestTimeout: 30000 #请求超时时间(毫秒)
       connectTimeout: 5000 #连接超时时间(毫秒)

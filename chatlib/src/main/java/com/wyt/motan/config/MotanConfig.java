@@ -22,6 +22,7 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.common.protocol")
     public ProtocolConfigBean protocolConfig() {
         ProtocolConfigBean config = new ProtocolConfigBean();
+        config.setHaStrategy("backup");
         return config;
     }
 
@@ -34,33 +35,17 @@ public class MotanConfig {
 
     @Bean(name = "motanBusinessClient")
     @ConfigurationProperties(prefix = "rpc.business.client")
-    public BasicRefererConfigBean baseRefererConfig1() {
+    public BasicRefererConfigBean baseRefererConfig() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setFilter("myOpentracing,fusingDrop");
-        return config;
-    }
-
-    @Bean(name = "motanChatClient")
-    @ConfigurationProperties(prefix = "rpc.chat.client")
-    public BasicRefererConfigBean baseRefererConfig2() {
-        BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setFilter("myOpentracing,fusingDrop");
+//        config.setFilter("myOpentracing");
         return config;
     }
 
     @Bean(name = "motanBusinessService")
     @ConfigurationProperties(prefix = "rpc.business.server")
-    public BasicServiceConfigBean baseServiceConfig1() {
+    public BasicServiceConfigBean baseServiceConfig() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
-        config.setFilter("recordReqId");
-        return config;
-    }
-
-    @Bean(name = "motanChatService")
-    @ConfigurationProperties(prefix = "rpc.chat.server")
-    public BasicServiceConfigBean baseServiceConfig2() {
-        BasicServiceConfigBean config = new BasicServiceConfigBean();
-        config.setFilter("recordReqId");
+//        config.setFilter("recordReqId");
         return config;
     }
 }

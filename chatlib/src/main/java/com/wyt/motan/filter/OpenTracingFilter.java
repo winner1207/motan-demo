@@ -27,6 +27,7 @@ import java.util.Map.Entry;
 
 /**
  * Created by wangyitao on 2018/12/25.
+ * 发送/接收请求过程中增加切面逻辑：调用跟踪
  */
 @Spi(scope = Scope.SINGLETON)
 @SpiMeta(name = "myOpentracing")

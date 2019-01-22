@@ -24,13 +24,12 @@ rpc:
     #指定需要解析的包名
     annotation:
       package: com.wyt.motan
-  chat:
+  business:
     #服务端配置
     server:
-      export:  'motanProtocol:8501' #服务端口
+      export:  'motanProtocol:8602' #服务端口
       group: motan_demo_chat
       registry: motanRegistry
-  business:
     #客户端配置
     client:
       protocol: motanProtocol

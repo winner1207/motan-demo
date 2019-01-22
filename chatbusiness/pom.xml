@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <motan.version>1.0.0</motan.version>
     </properties>
 
     <dependencies>
@@ -48,28 +49,28 @@
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-core</artifactId>
-            <version>RELEASE</version>
+            <version>${motan.version}</version>
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-transport-netty</artifactId>
-            <version>RELEASE</version>
+            <version>${motan.version}</version>
         </dependency>
         <!-- only needed for spring-based features -->
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-springsupport</artifactId>
-            <version>RELEASE</version>
+            <version>${motan.version}</version>
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-registry-zookeeper</artifactId>
-            <version>RELEASE</version>
+            <version>${motan.version}</version>
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>filter-opentracing</artifactId>
-            <version>RELEASE</version>
+            <version>${motan.version}</version>
         </dependency>
 
         <dependency>

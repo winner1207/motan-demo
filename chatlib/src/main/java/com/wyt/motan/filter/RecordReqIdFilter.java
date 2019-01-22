@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
  * Created by wangyitao on 2019/1/4.
- * 记录请求ID
+ * 发送/接收请求过程中增加切面逻辑：记录请求ID
  */
 @Spi(scope = Scope.SINGLETON)
 @SpiMeta(name = "recordReqId")

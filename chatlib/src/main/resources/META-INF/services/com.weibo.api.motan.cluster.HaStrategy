@@ -14,5 +14,4 @@
 #    limitations under the License.
 #
 
-com.wyt.motan.filter.OpenTracingFilter
-com.wyt.motan.filter.RecordReqIdFilter
+com.wyt.motan.haStrategy.BackupHaStrategy
