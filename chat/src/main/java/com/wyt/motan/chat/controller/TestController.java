@@ -49,7 +49,7 @@ public class TestController {
         long start = System.currentTimeMillis();
         for (int i = 0; i < num; i++) {
             long id = i;
-            ThreadPoolUtil.thread(id, new HashMap<>());
+            ThreadPoolUtil.thread(System.currentTimeMillis(), new HashMap<>());
         }
         long end = System.currentTimeMillis();
         logger.error("thread method cost:" + (end - start) + "ms");

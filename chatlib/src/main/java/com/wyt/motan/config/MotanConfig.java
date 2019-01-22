@@ -22,7 +22,6 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.common.protocol")
     public ProtocolConfigBean protocolConfig() {
         ProtocolConfigBean config = new ProtocolConfigBean();
-        config.setHaStrategy("backup");
         return config;
     }
 
@@ -37,7 +36,6 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.business.client")
     public BasicRefererConfigBean baseRefererConfig() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-//        config.setFilter("myOpentracing");
         return config;
     }
 
@@ -45,7 +43,6 @@ public class MotanConfig {
     @ConfigurationProperties(prefix = "rpc.business.server")
     public BasicServiceConfigBean baseServiceConfig() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
-//        config.setFilter("recordReqId");
         return config;
     }
 }

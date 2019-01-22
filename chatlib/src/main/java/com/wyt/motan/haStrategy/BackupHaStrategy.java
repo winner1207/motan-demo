@@ -5,12 +5,9 @@ import com.weibo.api.motan.cluster.LoadBalance;
 import com.weibo.api.motan.cluster.ha.FailoverHaStrategy;
 import com.weibo.api.motan.core.extension.SpiMeta;
 import com.weibo.api.motan.exception.MotanServiceException;
-import com.weibo.api.motan.rpc.Referer;
 import com.weibo.api.motan.rpc.Request;
 import com.weibo.api.motan.rpc.Response;
 import org.apache.log4j.Logger;
-
-import java.util.List;
 
 /**
  * Created by wangyitao on 2019/1/21.
@@ -21,14 +18,10 @@ public class BackupHaStrategy<T> extends FailoverHaStrategy<T> {
 
     private static Logger logger = Logger.getLogger(BackupHaStrategy.class);
 
-    private List<Referer<T>> refererList = null;
-    private List<Referer<T>> backupRefererList = null;
-
     @Override
     public Response call(Request request, LoadBalance<T> loadBalance) {
         Response response = null;
         try {
-            refererList = super.selectReferers(request, loadBalance);
             response = super.call(request, loadBalance);
             return response;
         } catch (MotanServiceException ex1) {

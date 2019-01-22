@@ -19,6 +19,8 @@ rpc:
     #协议配置
     protocol:
       name: motan #协议名称
+      haStrategy: backup #容错策略
+      loadbalance: myConsistent #负载均衡策略
       minWorkerThread: 20 #最小工作pool线程数
       maxWorkerThread: 50 #最大工作pool线程数
     #指定需要解析的包名
@@ -27,11 +29,13 @@ rpc:
   business:
     #服务端配置
     server:
+      filter: recordReqId
       export:  'motanProtocol:8601' #服务端口
       group: motan_demo_business
       registry: motanRegistry
     #客户端配置
     client:
+      filter: myOpentracing
       protocol: motanProtocol
       group: motan_demo_business
       check: false
